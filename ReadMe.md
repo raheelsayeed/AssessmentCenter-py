@@ -43,5 +43,6 @@ client.getScoreForSession(session)
 
 ## Todo
 
+- Error handling 
 - Remove Prints(Logs)
 - [score] return 
