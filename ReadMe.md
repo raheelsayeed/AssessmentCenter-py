@@ -1,7 +1,7 @@
-AssessmentCenter Python Framework
+AssessmentCenter Python API Wrapper 
 =================================
 
-Python framework for Patient Reported Outcome Measures (PRO-Measures). Computer Adaptive Test (backed by Item Response Theory) provided by AssessmentCenter at Northwestern University.
+Python API Wrapper Assessment Center's Session API. Built for Patient Reported Outcome Measures (PRO-Measures). Computer Adaptive Test (backed by Item Response Theory) provided by AssessmentCenter at Northwestern University.
 
 # Getting Started
 
