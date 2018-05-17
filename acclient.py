@@ -63,6 +63,37 @@ class ACClient(object):
         
         return formsarray
 
+    def batteries(self):
+        endpoint = 'Batteries/.json'
+        jsonDict = self.performRequest(endpoint)
+        batteries = jsonDict['Battery']
+        batteriesArray = []
+        for b in batteries:
+            batteryObj = acmodel.Battery(b['OID'], b['Name'])
+            batteriesArray.append(batteryObj)
+        return batteriesArray
+
+    
+    def formsForBatter(self, battery=acmodel.Battery):
+        endpoint = "Batteries/" + battery.oid + ".json"
+        jsonDict = self.performRequest(endpoint)
+        forms = jsonDict['Forms']
+        print(forms)
+        if forms is not None:
+            formsarray = []
+            for form in forms:
+                formObj = acmodel.Form(form['FormOID'], form['Name'])
+                formObj.order = form['Order']
+                formsarray.append(formObj)
+            return formsarray
+        else:
+            return None
+
+        
+
+
+        
+        
 
 
     def getCompleteForm(self, form=acmodel.Form):

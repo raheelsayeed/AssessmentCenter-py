@@ -41,6 +41,15 @@ client.getScoreForSession(session)
 ```
 
 
+
+# Batteries
+
+Lists all available batteries from AssessmentCenter
+
+```python
+client.batteries()
+```
+
 ## Todo
 
 - Error handling 

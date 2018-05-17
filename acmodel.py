@@ -21,6 +21,12 @@ class Form(Element):
         super().__init__(oid, 0, title)
         self.questionForms = questionForms
 
+class Battery(Element):
+    
+    def __init__(self, oid, title):
+        super().__init__(oid, 0, title)
+    
+
 
 class QuestionItem(Element):
 
